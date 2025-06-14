@@ -35,7 +35,7 @@ You can convert the Python script into a standalone executable (`.exe`) file for
 
 ## Results
 
-* All Info Sended To Telegram Bot.
+* All results sended to bot tel
 * Full Fast
 
 ---
