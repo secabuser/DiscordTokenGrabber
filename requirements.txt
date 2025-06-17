@@ -1,0 +1,6 @@
+requests
+pycryptodome
+pystyle
+paramiko
+psutil
+pywin32
