@@ -8,7 +8,7 @@ def generate_grabber_script():
     basicConfig(level=CRITICAL)
     sys.stderr = open(os.devnull, 'w')
 
-    # i am ravani - اگه انگلیسیم یه جایی رید ببخشید :)
+    #چون با ترنسلیت متن های انگلیسی رو زدم، پس اگه انگلیسیم یه جایی رید ببخشید  :)
     os.system('cls' if os.name == 'nt' else 'clear')
 
     print(Colorate.Diagonal(Colors.red_to_blue, Center.XCenter("""\
